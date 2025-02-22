@@ -1,5 +1,6 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+/* eslint-disable max-len */
+import Image from 'next/image';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src='/next.svg'
           alt="Next.js logo"
           width={180}
           height={38}
@@ -22,6 +23,7 @@ export default function Home() {
 
         <div className={styles.ctas}>
           <a
+
             className={styles.primary}
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
@@ -30,7 +32,7 @@ export default function Home() {
             <Image
               className={styles.logo}
               src="/vercel.svg"
-              alt="Vercel logomark"
+              alt='Vercel logomark'
               width={20}
               height={20}
             />
@@ -93,3 +95,4 @@ export default function Home() {
     </div>
   );
 }
+

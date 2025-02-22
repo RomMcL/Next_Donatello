@@ -1,52 +1,27 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-HELP
-node_modules
-dist
-dist-ssr
-*.local
+# My helper files
+/HELP
 
 # Editor directories and files
 .vscode/*
+!.vscode/settings.json
 !.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
+/donatello_shop/node_modules
+/donatello_shop/.yarn/*
+!/donatello_shop.yarn/patches
+!/donatello_shop.yarn/plugins
+!/donatello_shop.yarn/releases
+!/donatello_shop.yarn/versions
 
 # next.js
-/.next/
-/out/
+/donatello_shop/.next/
+/donatello_shop/out/
 
 # production
-/build
+/donatello_shop/build
 
-# misc
-.DS_Store
-*.pem
 
 # debug
 npm-debug.log*
@@ -54,8 +29,6 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
 
 # vercel
 .vercel
@@ -63,3 +36,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
