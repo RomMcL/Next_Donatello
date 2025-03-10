@@ -1,0 +1,121 @@
+/* Подключение шрифтов */
+@font-face {
+  font-display: swap;
+  font-family: Caveat;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../public/fonts/Caveat-Bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Caveat;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../public/fonts/Caveat-Medium.ttf') format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Caveat;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../public/fonts/Caveat-Regular.ttf') format("truetype");
+}
+
+/* Переменные */
+:root {
+  --background: #272727;
+  --foreground: #747474;
+  --orange: #FF652F;
+  --yellow: #FFE400;
+  --green: #14A76C;
+}
+
+/* Сброс стилей */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button { 
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--foreground);
+  font-family: Caveat,  Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  pointer-events: none;
+}
+
+/* Основные стили */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Caveat,  Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+    & main {
+      flex-grow: 1;
+    }
+}
+
+/* Основной контейнер */
+.master_container {
+  max-width: 1535px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Для модалок навешиваем на body, убирая скачок из-за исчезающей прокрутки */
+.overflow-hidden {
+  overflow-y: hidden;
+  padding-right: 8px;
+  /* position: fixed;
+  width: 100%;
+  height: 100%; */
+}
+
+/* Затемнённая подложка под модалку */
+.search-overlay {
+  background: var(--foreground);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+    &.overlay-active {
+      opacity: 0.8;
+      visibility: visible;
+      z-index: 101;
+    }
+}
+
+

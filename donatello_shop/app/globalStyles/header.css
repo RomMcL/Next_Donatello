@@ -1,0 +1,139 @@
+header {
+  position: relative;
+  z-index: 3;
+  background-color: var(--background);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20), 0px 0px 8px 0px rgba(0, 0, 0, 0.10);
+  & .header_container {
+    height: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /* Меню-бургер */
+    & .header_burger {
+      position: relative;
+      padding-left: 2.5rem;
+      transition: .2s ease-in-out color;
+      font-weight: 700;
+      font-size: 1.8rem;
+      &:before {
+        background-color: var(--foreground);
+        content: '';
+        height: 1em;
+        width: 1em;  
+        position: absolute;
+        left: 0.1em;
+        top: 0.2em;
+        -webkit-mask: url(/img/burger.svg) no-repeat center;
+        mask: url(/img/burger.svg) no-repeat center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+      }
+      &:hover::before {
+        transition: background-color 0.2s ease-in-out;
+        background-color: var(--orange);
+      }
+      &:hover {
+        color: var(--orange);
+        transition: .2s ease-in-out color;
+      }
+      @media (max-width: 800px) {
+          display: none;        
+      } 
+    }
+    /* Логотип, название сайта */
+    & .logo {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      & img {
+        max-width: 2rem;
+        max-height: 2rem;
+      }
+      & h1 {
+        color: var(--orange);
+      }
+      @media (max-width: 1000px) {
+        font-size: 1.5rem;
+      }
+      @media (max-width: 800px) {
+        font-size: 1rem;
+      }
+    }
+    /* Иконки поиска и навигации */
+    & .header_links {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      column-gap: 2em;
+        & li {
+          & a, button {
+            width: 1.2em;
+            height: 1.2em;
+            display: block;
+            position: relative;
+            &::before {
+              background-color: var(--foreground);
+              content: '';
+              height: 100%;
+              width: 100%;
+              left: 0;
+              position: absolute;
+              top: 0;
+              transition: background-color 0.2s ease-in-out;
+            }
+            &:hover::before {
+              transition: background-color 0.2s ease-in-out;
+              background-color: var(--orange);
+            }            
+          }                
+          & .search::before {
+            -webkit-mask: url(/img/search.svg) no-repeat center;
+            mask: url(/img/search.svg) no-repeat center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+          }
+          & .favor::before {
+            -webkit-mask: url(/img/favorites.svg) no-repeat center;
+            mask: url(/img/favorites.svg) no-repeat center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+          }
+          & .compare::before {
+            -webkit-mask: url(/img/comparison.svg) no-repeat center;
+            mask: url(/img/comparison.svg) no-repeat center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+          }
+          & .cart::before {
+            -webkit-mask: url(/img/cart.svg) no-repeat center;
+            mask: url(/img/cart.svg) no-repeat center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+          }          
+          & .profile::before {
+            -webkit-mask: url(/img/profile.svg) no-repeat center;
+            mask: url(/img/profile.svg) no-repeat center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+          }
+          & .profile {
+            border-radius: 50%;
+          }
+          @media (max-width: 800px) {
+            &:nth-child(n+2):nth-child(-n+4) {
+              display: none;
+            }
+          }    
+        }
+      @media (max-width: 1000px) {
+        column-gap: 1em;
+      }
+    }
+  }
+}

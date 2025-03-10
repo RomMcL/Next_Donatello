@@ -1,0 +1,149 @@
+{
+  "ru": {
+    "siteName": "Донателло",
+    "header": {
+      "menu_btn": "Меню",
+      "search": {
+        "title": "Поиск по донатам",
+        "placeholder": "Наименование доната, категория, тип..."
+      },
+      "profile": "Профиль"
+    },
+    "menu": {
+      "catalog": {
+        "catalog": "Каталог",
+        "life": {
+          "life": "На жизнь",
+          "food": "Питание",
+          "drink": "Выпивка",
+          "health": "Здоровье",
+          "relax": "Отдых"
+        },
+        "development": {
+          "development": "На развитие",
+          "study": "Учёба",
+          "hardware": "Железо",
+          "dreams": "Мечты"
+        },
+        "cat": {
+          "cat": "Кошке Вафле",
+          "cat-food": "Корм",
+          "cat-toys": "Игрушки"
+        },
+        "other": {
+          "other": "Иное",
+          "anecdote": "За анекдот"
+        }
+      },
+      "donaters": {
+        "donaters": "Донатерам",
+        "about": "Обо мне",
+        "blog": "Новости и статистика",
+        "shipping": "Доставка и оплата",
+        "returns": "Возврат доната"
+      },
+      "contacts": {
+        "contacts": "Контакты",
+        "tg": "Телеграм",
+        "vk": "Вконтакте"
+      }
+    },
+    "cart": {
+      "cart": "Корзина",
+      "order_price": "Сумма заказа",
+      "order": "Оформление заказа",
+      "go_to_cart": "Перейти в корзину"
+    },
+    "reused": {
+      "main": "Главная",
+      "comparison": "Сравнение",
+      "favorites": "Избранное",
+      "more": "Ещё...",
+      "watched_products": "Просмотренные донаты",
+      "collection_products": "Донаты по коллекции"
+    },
+    "footer": {
+      "copyright": "Денисенков Роман, 2025",
+      "project_type": "Псевдо Интернет-магазин",
+      "personal_data_policy": "Политика обработки данных",
+      "privacy_policy": "Политика конфиденциальности",
+      "about_project": "О проекте",
+      "personal_website": "Личный сайт",
+      "social_network": "Соцсети"
+    }
+  },
+
+  "en": {
+    "siteName": "Donatello",
+    "header": {
+      "menu_btn": "Menu",
+      "search": {
+        "title": "Search for donations",
+        "placeholder": "Name of the donation, category, type..."
+      },
+      "profile": "Profile"
+    },
+    "menu": {
+      "catalog": {
+        "catalog": "Catalog",
+        "life": {
+          "life": "For a living",
+          "food": "Food",
+          "drink": "Drink",
+          "health": "Health",
+          "relax": "Relax"
+        },
+        "development": {
+          "development": "For development",
+          "study": "Study",
+          "hardware": "Hardware",
+          "dreams": "Dreams"
+        },
+        "cat": {
+          "cat": "For a cat Waffle",
+          "cat-food": "Cat Food",
+          "cat-toys": "Cat Toys"
+        },
+        "other": {
+          "other": "Other",
+          "anecdote": "For the joke"
+        }
+      },
+      "donaters": {
+        "donaters": "For donaters",
+        "about": "About me",
+        "blog": "News and statistics",
+        "shipping": "Shipping and payment",
+        "returns": "Donate returns"
+      },
+      "contacts": {
+        "contacts": "Contacts",
+        "tg": "Telegram",
+        "vk": "VKontakte"
+      }
+    },
+    "cart": {
+      "cart": "Cart",
+      "order_price": "Order price",
+      "order": "Placing an order",
+      "go_to_cart": "Go to the cart"
+    },
+    "reused": {
+      "main": "Main",
+      "comparison": "Comparison",
+      "favorites": "Favorites",
+      "more": "More...",
+      "watched_products": "Watched donations",
+      "collection_products": "Donations by Collection"
+    },
+    "footer": {
+      "copyright": "Denisenkov Roman, 2025",
+      "project_type": "Pseudo Online Store",
+      "personal_data_policy": "Data processing policy",
+      "privacy_policy": "Privacy policy",
+      "about_project": "About project",
+      "personal_website": "Personal website",
+      "social_network": "Social network"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.search-modal {
+  width: 94%;
+  max-width: 850px;
+  height: 570px;
+  position: fixed;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--background);
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  z-index: 102;
+  @media (max-width: 1000px) {
+    top: 4.3rem;    
+  }  
+  @media (max-width: 800px) {
+    top: 3.8rem;
+  }  
+  @media (max-width: 590px) {
+      padding: 0.75rem;
+  }  
+    /* Кнопка закрытия */
+    & .search-modal__close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: var(--foreground);
+      -webkit-mask: url(/img/close-modal.svg) no-repeat center;
+      mask: url(/img/close-modal.svg) no-repeat center;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      &:hover {
+        transition: background-color 0.2s ease-in-out;
+        background-color: var(--orange);
+      }
+      @media (max-width: 590px) {
+          top: 0.75rem;
+          right: 0.75rem;
+      }
+    }
+    /* Заголовок */
+    & .search-modal__title {
+      text-align: center;
+      @media (max-width: 590px) {
+        margin-bottom: 0.75rem;
+      } 
+    }
+    /* Топ */
+    & .search-modal__top {
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+        /* Инпут ввода */
+        & .search-modal__label {
+          display: block;
+          position: relative;
+          width: 100%;
+          margin-top: 1.5rem;
+          margin-bottom: 1.2rem;
+            & .search-modal__input {
+              width: 100%;
+              border: none;
+              background: var(--foreground);
+              height: 2rem;
+              padding-left: 0.5rem;
+              overflow: hidden;
+              color: var(--background);
+              font-family: Caveat,  Arial, Helvetica, sans-serif;
+              font-weight: 400;
+              font-size: 1.5rem;
+              border-radius: 0.4rem;
+              caret-color: var(--orange);
+              &:focus { outline: 2px solid var(--green); }        
+                &.filled_in + .search-modal__placeholder {
+                  top: -1.5rem;
+                  font-size: 1.2rem;
+                  transition: top .2s ease-in-out, font-size .2s ease-in-out, color .2s ease-in-out;
+                  color: var(--orange);
+                }
+            }          
+            & .search-modal__placeholder {
+              position: absolute;
+              left: 0.5rem;
+              top: 0.1rem;
+              pointer-events: none;
+              color: var(--background);
+              transition: top .2s ease-in-out, font-size .2s ease-in-out, color .2s ease-in-out;
+              @media (max-width: 450px) {
+                font-size: 1.2rem;
+                top: 0.3rem;
+              }
+            }
+          @media (max-width: 590px) {
+            margin-top: 1.2rem;
+          }
+        }
+    }
+
+
+}
