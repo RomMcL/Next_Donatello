@@ -11,6 +11,7 @@ import MobileNavbar from '../modules/global/MobileNavbar/MobileNavbar';
 import Footer from '../modules/global/Footer/Footer';
 import SearchModal from '../modules/global/SearchModal/SearchModal';
 import { handleCloseSearchModal } from '@/lib/utils/common';
+import { modalVariants } from '@/lib/constants/animations-variants';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const isMedia800 = useMediaQuery(800);
@@ -24,9 +25,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <AnimatePresence>
         {searchModal && (
           <motion.div
-            initial={{ opacity: 0, zIndex: 102 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={'initial'} animate={'animate'} exit={'exit'} variants={modalVariants}
           >
             <SearchModal />
           </motion.div>

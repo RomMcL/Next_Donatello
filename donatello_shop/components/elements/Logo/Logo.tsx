@@ -8,7 +8,9 @@ const Logo = () => {
     <>
       <Link className='logo' href='/'>
         <Image src='/img/logo.svg' alt='Donatello Logo' width={64} height={64} />
-        <h1>{translations[lang].siteName}</h1>
+        <h1 style={{ letterSpacing: lang !== 'ru' ? '0.3rem' : 'normal' }}>
+          {translations[lang].siteName}
+        </h1>
       </Link>
     </>
   );

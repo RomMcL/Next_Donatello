@@ -30,9 +30,10 @@
           "cat-food": "Корм",
           "cat-toys": "Игрушки"
         },
-        "other": {
-          "other": "Иное",
-          "anecdote": "За анекдот"
+        "wishes": {
+          "wishes": "Пожелания",
+          "well-wisher": "Добрые",
+          "haters": "Хейтерские"
         }
       },
       "donaters": {
@@ -70,6 +71,35 @@
       "about_project": "О проекте",
       "personal_website": "Личный сайт",
       "social_network": "Соцсети"
+    },
+    "main_page": {
+      "hiden_title": "Псевдо интернет-магазин донатов Донателло",
+      "important_info": {
+        "btn_text": "Важная информация",
+        "title": "Важно!",
+        "text": "Данный сайт не предполагает продажу каких бы то ни было товаров. Любая \"покупка\" является донатом автору сайта.",
+        "close": "Всё ясно"
+      },
+      "slogan": {
+        "string_1": "Плюсани",
+        "string_2": "себе в карму"
+      },
+      "subslogan": "с новой коллекцией донатов от",
+      "new_collection_name": "Коллекция \"На Дошик\"",
+      "tooltip": {
+        "product_1": {
+          "title": "Дошик",
+          "type": "со вкусом говядины"
+        },
+        "product_2": {
+          "title": "Дошик",
+          "type": "со вкусом креветок"
+        },
+        "product_3": {
+          "title": "Дошик",
+          "type": "со вкусом грибов"
+        }
+      }
     }
   },
 
@@ -104,9 +134,10 @@
           "cat-food": "Cat Food",
           "cat-toys": "Cat Toys"
         },
-        "other": {
-          "other": "Other",
-          "anecdote": "For the joke"
+        "wishes": {
+          "wishes": "Wishes",
+          "well-wisher": "From well-wishers",
+          "haters": "From haters"
         }
       },
       "donaters": {
@@ -144,6 +175,35 @@
       "about_project": "About project",
       "personal_website": "Personal website",
       "social_network": "Social network"
+    },
+    "main_page": {
+      "hiden_title": "Pseudo online store of Donatello donations",
+      "important_info": {
+        "btn_text": "Important information",
+        "title": "Importantly!",
+        "text": "This site does not involve the sale of any goods. Any \"purchase\" is a donation to the author of the site.",
+        "close": "Clearly"
+      },
+      "slogan": {
+        "string_1": "Add a plus",
+        "string_2": "to your karma"
+      },
+      "subslogan": "with a new collection of donations from",
+      "new_collection_name": "Collection \"To Doshik\"",
+      "tooltip": {
+        "product_1": {
+          "title": "Doshik",
+          "type": "with beef flavor"
+        },
+        "product_2": {
+          "title": "Doshik",
+          "type": "with the taste of shrimp"
+        },
+        "product_3": {
+          "title": "Doshik",
+          "type": "with mushroom flavor"
+        }
+      }
     }
   }
 }

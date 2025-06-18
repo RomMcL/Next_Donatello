@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   const handleOpenSearchModal = () => {
-    addOverflowHiddenToBody();
+    addOverflowHiddenToBody('0');
     openSearchModal();
   };
 

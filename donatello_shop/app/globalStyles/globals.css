@@ -26,6 +26,7 @@
 /* Переменные */
 :root {
   --background: #272727;
+  --background-opacity: 27, 27, 27;
   --foreground: #747474;
   --orange: #FF652F;
   --yellow: #FFE400;
@@ -88,7 +89,6 @@ body {
 .master_container {
   max-width: 1535px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 /* Для модалок навешиваем на body, убирая скачок из-за исчезающей прокрутки */
@@ -116,6 +116,14 @@ body {
       visibility: visible;
       z-index: 101;
     }
+}
+
+/* Активный слайд свипера верхней секции главной страницы */
+/* Видимость подсказки и ссылки перехода */
+.swiper-slide-active *:not(:first-child)  {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity .5s ease-in-out, visibility .2s ease-in-out;
 }
 
 

@@ -112,12 +112,17 @@ const ListCatalog = ({ type }: { type: string }) => {
       isActive: showCatList,
     },
     {
-      name: translations[lang].menu.catalog.other.other,
-      nameID: 'other',
+      name: translations[lang].menu.catalog.wishes.wishes,
+      nameID: 'wishes',
       items: [
         {
-          id: 'anecdote',
-          text: translations[lang].menu.catalog.other.anecdote,
+          id: 'well',
+          text: translations[lang].menu.catalog.wishes['well-wisher'],
+          href: '/catalog/',
+        },
+        {
+          id: 'haters',
+          text: translations[lang].menu.catalog.wishes.haters,
           href: '/catalog/',
         },
       ],
