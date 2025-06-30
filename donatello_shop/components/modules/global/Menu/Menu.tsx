@@ -10,7 +10,7 @@ import Logo from '@/components/elements/Logo/Logo';
 import MenuItems from './MenuItems';
 
 import { AllowedLangs } from '@/lib/constants/lang';
-import { removeOverflowHiddenFromBody } from '@/lib/utils/common';
+import { removeNoScrollFromBody } from '@/lib/utils/common';
 
 const Menu = () => {
   const { lang, translations } = useLang();
@@ -25,7 +25,7 @@ const Menu = () => {
   const handleSwitchLangToEn = () => handleSwitchLang('en');
 
   const handleCloseMenu = () => {
-    removeOverflowHiddenFromBody();
+    removeNoScrollFromBody();
     closeMenu();
   };
 

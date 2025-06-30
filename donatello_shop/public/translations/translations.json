@@ -99,6 +99,11 @@
           "title": "Дошик",
           "type": "со вкусом грибов"
         }
+      },
+      "section": {
+        "category": "Категории",
+        "new": "Новинки",
+        "all": "Все"
       }
     }
   },
@@ -203,6 +208,11 @@
           "title": "Doshik",
           "type": "with mushroom flavor"
         }
+      },
+      "section": {
+        "category": "Category",
+        "new": "New",
+        "all": "All"
       }
     }
   }

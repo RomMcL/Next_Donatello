@@ -6,6 +6,19 @@
   bottom: 5rem;
   overflow-y: auto;
   background-color: var(--background);
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }  
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }  
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--foreground);
+      border-radius: 3px;
+    }  
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: var(--yellow);
+    }
   @media (max-width: 450px) {
     bottom: 4rem;
   }
@@ -16,7 +29,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /* background-color: yellowgreen; */
         /* Background изображение в меню */
         & .catalog-menu__bg {
           position: absolute;

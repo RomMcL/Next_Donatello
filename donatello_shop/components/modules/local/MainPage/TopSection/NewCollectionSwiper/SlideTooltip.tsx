@@ -8,6 +8,7 @@ const SlideTooltip = ({ image, title, type, price }: INewCollectionSlideTooltip)
       className={styles.slide_tooltip__img}
       src={image}
       alt={title}
+      priority
     />
     <div className={styles.slide_tooltip__inner}>
       <div className={styles.slide_tooltip__title_price}>

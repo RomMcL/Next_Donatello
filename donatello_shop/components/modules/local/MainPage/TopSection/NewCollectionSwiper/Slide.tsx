@@ -10,6 +10,7 @@ const Slide = ({ slide }: { slide: ITopSectionSlide }) => (
       className={styles.slide__img}
       src={slide.image}
       alt={slide.title}
+      priority
     />
     <Link href={slide.link} className={styles.slide__link} />
     <SlideTooltip

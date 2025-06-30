@@ -3,7 +3,7 @@ import { openMenu, openSearchModal } from '@/effector-context/modals';
 
 import { useLang } from '@/custom-hooks/useLang';
 
-import { addOverflowHiddenToBody } from '@/lib/utils/common';
+import { addNoScrollToBody } from '@/lib/utils/common';
 
 import Logo from '@/components/elements/Logo/Logo';
 import CartPopup from './CartPopup/CartPopup';
@@ -14,12 +14,12 @@ const Header = () => {
   const { lang, translations } = useLang();
 
   const handleOpenMenu = () => {
-    addOverflowHiddenToBody();
+    addNoScrollToBody('hidden');
     openMenu();
   };
 
   const handleOpenSearchModal = () => {
-    addOverflowHiddenToBody('0');
+    addNoScrollToBody();
     openSearchModal();
   };
 

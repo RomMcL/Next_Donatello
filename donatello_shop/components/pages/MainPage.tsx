@@ -1,4 +1,5 @@
 import TopSection from '../modules/local/MainPage/TopSection/TopSection';
+import CategorySection from '../modules/local/MainPage/CategorySection/CategorySection';
 import styles from '@/styles/page-main/index.module.css';
 
 const MainPage = () => {
@@ -7,6 +8,7 @@ const MainPage = () => {
   return (
     <main className={`master_container ${styles.main_page_container}`} >
       <TopSection />
+      <CategorySection />
     </main >
   );
 };

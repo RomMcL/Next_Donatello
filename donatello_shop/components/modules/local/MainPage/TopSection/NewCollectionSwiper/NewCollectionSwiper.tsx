@@ -1,11 +1,10 @@
 'use client';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { useLang } from '@/custom-hooks/useLang';
 
 import { SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
-/* import { Swiper as SwiperType } from 'swiper/types'; */
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
@@ -18,6 +17,7 @@ import img_3 from '@/public/img/main_page_new_collect_3.png';
 import styles from '@/styles/page-main/top-section.module.css';
 
 import dynamic from 'next/dynamic';
+
 // Динамическая загрузка Swiper без SSR
 const SwiperNoSSR = dynamic(
   () => import('swiper/react').then((mod) => mod.Swiper),
@@ -26,6 +26,29 @@ const SwiperNoSSR = dynamic(
     ssr: false
   }
 );
+
+// Отключение Swiper Loop Warning в консольке (предупреждение о малом количестве слайдов)
+const useSwiperLoopWarningFix = () => {
+  const originalWarn = useRef<typeof console.warn | null>(null);
+
+  useEffect(() => {
+    // Сохраняем оригинальный console.warn
+    originalWarn.current = console.warn;
+    // Переопределяем console.warn
+    console.warn = (...args) => {
+      if (args[0]?.includes?.('Swiper Loop Warning')) {
+        return;
+      }
+      originalWarn.current?.apply(console, args);
+    };
+    // Восстанавливаем console.warn при размонтировании
+    return () => {
+      if (originalWarn.current) {
+        console.warn = originalWarn.current;
+      }
+    };
+  }, []);
+};
 
 const NewCollectionSwiper = () => {
   const { lang, translations } = useLang();
@@ -57,16 +80,7 @@ const NewCollectionSwiper = () => {
     },
   ];
 
-  // Отключение Swiper Loop Warning в консольке (предупреждение о малом количестве слайдов)
-  const originalWarn = useRef<typeof console.warn | null>(null);
-
-  const handleSwiperInit = () => {
-    originalWarn.current = console.warn;
-    console.warn = (...args) => {
-      if (args[0]?.includes?.('Swiper Loop Warning')) return;
-      originalWarn.current?.apply(console, args);
-    };
-  };
+  useSwiperLoopWarningFix();
 
   return (
     <div className={styles.carousel_block}>
@@ -84,7 +98,7 @@ const NewCollectionSwiper = () => {
 
         slidesPerView={'auto'}
         loop={true}
-        onInit={handleSwiperInit}
+        onInit={() => { }}
 
         initialSlide={1}
         allowSlideNext={false}

@@ -8,7 +8,7 @@ import { asideVariants, itemSideVariants, sideVariants } from '@/lib/constants/a
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { removeOverflowHiddenFromBody } from '@/lib/utils/common';
+import { removeNoScrollFromBody } from '@/lib/utils/common';
 import ListCatalog from './ListCatalog';
 import Header from '../Header/Header';
 
@@ -19,8 +19,14 @@ const CatalogMenu = () => {
   const popupZIndex = useMenuAnimation(4, catalogMenuIsOpen);
 
   const handleCloseMenu = () => {
-    removeOverflowHiddenFromBody();
+    removeNoScrollFromBody();
     closeCatalogMenu();
+    // Убираем двойной скролл
+    const menu = document.querySelector('.catalog-menu') as HTMLBodyElement;
+    menu.style.setProperty('overflow-y', 'hidden');
+    setTimeout(() => {
+      menu.style.removeProperty('overflow-y');
+    }, 500);
   };
 
   return (

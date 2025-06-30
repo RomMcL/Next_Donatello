@@ -1,7 +1,7 @@
 'use client';
 import { useLang } from '@/custom-hooks/useLang';
 import { openCatalogMenu, closeCatalogMenu, openMenu, closeMenu } from '@/effector-context/modals';
-import { addOverflowHiddenToBody } from '@/lib/utils/common';
+import { addNoScrollToBody } from '@/lib/utils/common';
 import Link from 'next/link';
 import CatalogMenu from '../Menu/CatalogMenu';
 
@@ -9,13 +9,13 @@ const MobileNavbar = () => {
   const { lang, translations } = useLang();
 
   const handleOpenMenu = () => {
-    addOverflowHiddenToBody('0');
+    addNoScrollToBody('hidden');
     openMenu();
     closeCatalogMenu();
   };
 
   const handleOpenCatalogMenu = () => {
-    addOverflowHiddenToBody('0');
+    addNoScrollToBody('hidden');
     openCatalogMenu();
     closeMenu();
   };

@@ -1,24 +1,22 @@
 import { closeSearchModal } from '@/effector-context/modals';
 
-/* Добавляет для body класс overflow-hidden, запрещающий скролл при открытой модалке */
+/* Добавляет для body класс no-scroll, запрещающий скролл при открытой модалке */
 let scrollY = 0 as number; // текущее положение скролла
 
-export const addOverflowHiddenToBody = (paddingRight = '') => {
+export const addNoScrollToBody = (overflow = 'scroll') => {
   const body = document.querySelector('body') as HTMLBodyElement;
-
   scrollY = window.scrollY || document.documentElement.scrollTop;
   body.style.setProperty('--scroll-position', `${scrollY}px`);
-  body.classList.add('overflow-hidden');
-
-  if (paddingRight) body.style.paddingRight = paddingRight;
+  body.style.setProperty('--overflow-y', overflow);
+  body.classList.add('no-scroll');
 };
 
 /* Убирает запрет скролла */
-export const removeOverflowHiddenFromBody = () => {
+export const removeNoScrollFromBody = () => {
   const body = document.querySelector('body') as HTMLBodyElement;
-  body.classList.remove('overflow-hidden');
-
-  body.style.removeProperty('--scroll-position');
+  scrollY = parseInt(body.style.getPropertyValue('--scroll-position'));
+  body.classList.remove('no-scroll');
+  body.style.removeProperty('--overflow-y');
   window.scrollTo(0, scrollY);
 };
 
@@ -30,6 +28,6 @@ export const getWindowWidth = () => {
 
 /* Закрытие окна поиска */
 export const handleCloseSearchModal = () => {
-  removeOverflowHiddenFromBody();
+  removeNoScrollFromBody();
   closeSearchModal();
 };
